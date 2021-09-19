@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+  <style>
+    .welcome-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffff;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    padding: 2rem 2rem;
+    align-items: center;
+  }
+
+  .link {
+    padding: .5rem .5rem;
+    color: #ffff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .logout {
+    background-color: #CC3300;
+  }
+
+  .reset-password {
+    background-color: #FFCC00;
+  }
+
+  .login {
+    background-color: #2416ab;
+  }
+</style>
+
+
+{% if user.is_authenticated %}
+  
+  <div class="welcome-container">
+    <h1>Hi {{ user.username }}!</h1>
+    <p><a href="{% url 'logout' %}" class="logout link
+      ">Log Out</a></p>
+  <p><a href="{% url 'password_reset' %}" class="reset-password link">Reset Password</a></p>
+  </div>
+
+
+{% else %}
+  <div class="welcome-container">
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}" class="login link">Log In</a>
+  </div>
+{% endif %}
+
+
+{% endblock %}

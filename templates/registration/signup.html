@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+  
+  <style>
+    
+  .login-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .login-link > p {
+    margin-right: .5rem;
+  }
+
+  .message {
+    color: #8d85d2;
+    text-align: center;
+  }
+
+</style>
+
+<form role="form" action="" method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit">Submit</button>
+                    </form>
+
+<!-- <div class="card">
+  
+  <div class="card-title">
+   <h1>Sign Up</h1> 
+  </div>
+  
+  <form method="post">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <label for="id_email">Email*</label>
+      <input placeholder="example@gmail.com" type="text" name="email" id="id_email" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="id_username">Username*</label>
+      <input placeholder="Enter your username" type="text" name="username" id="id_username" required>
+    </div>
+
+    <div class="form-group">
+      <label for="id_password1">Password*</label>
+      <input placeholder="Min. 8 character" type="password" name="password1" id="id_password1" required>
+      <span class="message">
+        *Your password must contain at least 8 characters.
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label for="id_password2">Confirm Password*</label>
+      <input placeholder="Min. 8 character" type="password" name="password2" id="id_password2" required>
+      <span class="message">
+        *Enter the same password as before, for verification.
+      </span>
+    </div>
+    
+    <div class="form-group">
+      <button class="btn" type="submit">Sign Up</button>
+    </div>
+  </form>
+
+  <div class="login-link">
+    <p>Do you have an account?</p>
+    <a href="{% url 'login' %}" class="link">Login</a>
+  </div>
+</div>
+ -->
+ 
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Log In{% endblock %}
+
+
+{% block content %}
+
+<style>
+  
+  .forget-password {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: .5rem;
+  }
+
+  .signup-link {
+    display: flex;
+    align-items: center;
+  }
+
+  .signup-link > p {
+    margin-right: .5rem;
+  }
+  
+</style>
+
+
+<div class="card">
+  
+  <div class="card-title">
+   <h1>Login</h1> 
+  </div>
+  
+  <form method="post">
+    {% csrf_token %}
+    
+    <div class="form-group">
+      <label for={{ form.username.usernameId }}>Username*</label>
+      <input placeholder="Enter your username" type="text" name="username" id="usernameId" required>
+      
+    </div>
+
+    <div class="form-group">
+      <label for={{ form.password.passwordId }}>Password*</label>
+      <input placeholder="Min. 8 character" type="password" name="password" id="passwordId" required>
+    </div>
+
+    <div class="forget-password">
+      <a href="{% url 'password_reset' %}" class="link">Forget password?</a>
+    </div>
+    
+    <div class="form-group">
+      <button class="btn" type="submit">Log In</button>
+    </div>
+  </form>
+
+  <div class="signup-link">
+    <p>Not register yet?</p>
+    <a href="{% url 'signup' %}" class="link">Create an Account</a>
+  </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
