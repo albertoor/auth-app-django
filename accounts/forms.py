@@ -15,12 +15,3 @@ class SignUpForm(UserCreationForm):
 			'password1',
 			'password2'
 		)
-
-	# def save(self, commit=True):
-	# 	user = super(SignUpForm, self).save(commit=False)
-	# 	user.email = cleaned_data['email']
-
-	# 	if commit:
-	# 		user.save()
-
-	# 	return user

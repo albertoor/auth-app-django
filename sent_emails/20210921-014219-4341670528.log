@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: metaex@gmail.com
+Date: Tue, 21 Sep 2021 01:42:19 -0000
+Message-ID: <163218853992.5301.13943173494013686232@aornelas.local>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/reset/OQ/atay2j-25bc57d218efb32efff695ccc71a0a7d/
+
+Your username, in case you’ve forgotten: metaex
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

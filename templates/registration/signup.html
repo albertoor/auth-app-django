@@ -22,13 +22,13 @@
 
 </style>
 
-<form role="form" action="" method="post">
+<!-- <form role="form" action="" method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <button type="submit">Submit</button>
-                    </form>
+                    </form> -->
 
-<!-- <div class="card">
+<div class="card">
   
   <div class="card-title">
    <h1>Sign Up</h1> 
@@ -49,7 +49,9 @@
 
     <div class="form-group">
       <label for="id_password1">Password*</label>
-      <input placeholder="Min. 8 character" type="password" name="password1" id="id_password1" required>
+      <input placeholder="Min. 8 character" type="password" name="password1"
+      autocomplete="new-password"
+      id="id_password1" required>
       <span class="message">
         *Your password must contain at least 8 characters.
       </span>
@@ -57,7 +59,8 @@
 
     <div class="form-group">
       <label for="id_password2">Confirm Password*</label>
-      <input placeholder="Min. 8 character" type="password" name="password2" id="id_password2" required>
+      <input placeholder="Min. 8 character" type="password" name="password2"
+      autocomplete="new-password" id="id_password2" required>
       <span class="message">
         *Enter the same password as before, for verification.
       </span>
@@ -73,6 +76,6 @@
     <a href="{% url 'login' %}" class="link">Login</a>
   </div>
 </div>
- -->
+
  
 {% endblock %}

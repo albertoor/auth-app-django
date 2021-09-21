@@ -101,14 +101,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# URL for login redirect 
 LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home' # new
 
-# Send emails
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = str(BASE_DIR.joinpath('sent_emails'))
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
